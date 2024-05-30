@@ -1,0 +1,289 @@
+:root{
+    --g1: black;
+    --g2: cadetblue;
+    --g3: palevioletred;
+}
+
+body{
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.b1{
+    position: absolute;
+    height: 100vh;
+    width: 35vw;
+    background-color: rgb(222, 184, 135);
+    box-sizing: border-box;
+    border-top: 10px solid snow;
+    border-left: 10px solid snow;
+}
+
+.b2
+{
+    position: absolute;
+    left: 35%;
+    height: 100vh;
+    width: 65vw;
+    background-color: rgb(95, 158, 160);
+    box-sizing: border-box;
+    border-top: 10px solid rgb(216, 112, 147);
+}
+
+.jco{
+    position: absolute;
+    top: 5%;
+    left: 68%;
+    font-size: 160px;
+    color: palevioletred;
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    -webkit-text-stroke: 5px black;
+}
+
+.m1{
+    position: absolute;
+    background-color: black;
+    height: 70vh;
+    width: 25vw;
+    top: 18%;
+    left: 10%;
+    border: 7px solid snow;
+    border-right: 3.5px solid snow;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+.m1:hover:before{
+    background-position: 100% 100%;
+}
+  
+.m1:before{
+    background: linear-gradient(
+      130deg, 
+      transparent 0% 33%, 
+      var(--g1) 66%, 
+      var(--g2) 83.5%, 
+      var(--g3) 100%
+    );
+    background-position: 0% 0%;
+    background-size: 300% 300%;
+    content: "";
+    height: 100%;
+    left: 0px;
+    pointer-events: none;
+    position: absolute;
+    top: 0px;
+    transition: background-position 350ms ease, transform 350ms ease;
+    width: 100%;
+    z-index: 0;
+} 
+
+.co{
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    color: palevioletred;
+    font-size: 70px;
+    font-weight: 900;
+    cursor: default;
+}
+
+.co span{
+    color: snow;
+    font-size: 100px;
+}
+
+.m2{
+    background-color: burlywood;
+    position: relative;
+    height: 70vh;
+    width: 40vw;
+    top: 18%;
+    left: 35%;
+    border: 7px solid snow;
+    border-left: 3.5px solid snow;
+    box-sizing: border-box;
+}
+
+.cardgroup{
+    height: 85%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    position: absolute;
+    height: 75%;
+    width: 92%;
+    transition: transform 400ms ease;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border: 5px solid cadetblue;
+    background-color: palevioletred;
+}
+
+.card:nth-child(1){
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+}
+
+.card:nth-child(2){
+    /* background-color: bisque; */
+}
+
+.card:nth-child(3){
+    /* background-color: violet; */
+}
+
+.card:nth-child(4){
+    /* background-color: darksalmon; */
+}
+
+.card:nth-child(5){
+    /* background-color: seagreen; */
+}
+
+.card:nth-child(6){
+    /* background-color: lemonchiffon; */
+}
+
+.card:nth-child(7){
+    /* background-color: khaki; */
+}
+
+.card:nth-child(8){
+    /* background-color: rebeccapurple; */
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons{
+    height: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.card[data-status="unknown"]{
+    transform: scale(0);
+}
+
+.card[data-status="after"]{
+    transform: translateX(-50%) scale(0); 
+}
+
+.card[data-status="becoming-active-from-before"]{
+    transform: translateX(50%) scale(0);
+    transition: none;
+}
+
+.card[data-status="active"]{
+    transition-delay: 300ms;
+}
+
+.card[data-status="before"] {
+    transform: translateX(50%) scale(0);
+}
+
+.card[data-status="becoming-active-from-after"] {
+    transform: translateX(-50%) scale(0);
+    transition: none;
+}
+
+.cardgroup input{
+    border: none;
+}
+
+.inputbox
+{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 5px solid burlywood;
+}
+
+.inputbox label
+{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: snow;
+    font-size: 25px;
+    font-weight: 600;
+    pointer-events: none;
+    -webkit-text-stroke: 0.5px burlywood;
+}
+
+input:focus ~ label{
+    top: -5px;
+}
+input:valid ~ label{
+    top: -5px;
+}
+
+.inputbox input
+{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    padding: 0 35px 0 5px;
+    color: snow;
+}
+
+#back, #next{
+    width: 100px;
+    padding: 12px 0;
+    border: 3px solid;
+    background-color: palevioletred;
+    border-radius: 15px;
+    outline: none;
+    margin-bottom: 15px;
+
+    color: snow;
+    font-size: 15px;
+    font: 800;
+}
+
+#next:hover{
+    transform: scale(1.1);
+    background-color: cadetblue;
+    color: black;
+}
+
+#back:hover{
+    transform: scale(1.1);
+    background-color: cadetblue;
+    color: black;
+}
+
+.subbut button{
+    width: 100px;
+    padding: 12px 0;
+    border: 0px;
+    background-color: burlywood;
+    border-radius: 15px;
+    outline: none;
+    margin-bottom: 15px;
+
+    color: snow;
+    font-size: 15px;
+    font: 800;
+}
+
+.subbut button:hover{
+    background-color: black;
+    color: palevioletred;
+    transform: scale(1.1);
+}

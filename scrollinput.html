@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kino</title>
+    <link rel="stylesheet" href="scrollinput.css">
+    <script src="scrollinput.js"></script>
+</head>
+<body>
+
+    <div class="b1"></div>
+
+    <div class="b2">
+        <div class="jco">
+            ランダム
+        </div>
+    </div>
+
+    <div class="m1">
+        <div class="co">
+            <div class="coname">kino<span class="dot">.</span></div>
+        </div>
+    </div>
+
+    <div class="m2">
+        <div class="cardgroup">
+            <div class="card" data-index="0" data-status="active">
+                <div class="inputbox">
+                    <input type="text" required>
+                    <label for="fname">First Name</label>
+                </div>
+                <div class="inputbox">
+                    <input type="text" required>
+                    <label for="lname">Last Name</label>
+                </div>
+            </div>
+
+            <div class="card" data-index="1" data-status="unknown">
+                <div class="inputbox">
+                    <input type="text" required>
+                    <label for="fname">Contact Number</label>
+                </div>
+            </div>
+
+            <div class="card" data-index="2" data-status="unknown">
+                <div class="inputbox">
+                    <input type="email" required>
+                    <label for="email">Email</label>
+                </div>
+            </div>
+
+            <div class="card" data-index="3" data-status="unknown">
+                <div class="inputbox">
+                    <input type="text" required>
+                    <label for="gender">Gender</label>
+                </div>
+            </div>
+
+            <div class="card" data-index="4" data-status="unknown">
+                <div class="inputbox">
+                    <input type="text" required>
+                    <label for="add">Address</label>
+                </div>
+            </div>
+
+            <div class="card" data-index="5" data-status="unknown">
+                <div class="inputbox">
+                    <input type="text" required>
+                    <label for="portfolio">Portfolio</label>
+                </div>
+            </div>
+
+            <div class="card" data-index="6" data-status="unknown">
+                <div class="inputbox">
+                    <input type="text" required>
+                    <label for="userid">User ID</label>
+                </div>
+            </div>
+
+            <div class="card" data-index="7" data-status="unknown">
+                <div class="inputbox">
+                    <input type="password" required>
+                    <label for="pwd">Password</label>
+                </div>
+                <div class="inputbox">
+                    <input type="password" required>
+                    <label for="pwd2">Confirm Password</label>
+                </div>
+                <div class="subbut">
+                    <button type="submit">Submit</button>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="back" onclick="handleback()">Back</button>
+            <button id="next" onclick="handlenext()">Next</button>
+        </div>
+    </div>
+
+</body>
+</html>
+
+m2 = cardswiper
+cardgroup = cardgroups
+card = cardgroup
